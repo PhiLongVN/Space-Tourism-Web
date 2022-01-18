@@ -1,0 +1,171 @@
+/* ---------------------------------- cotainer --------------------------------- */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  background-image: url(../starter-code/assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------------------------------- .main --------------------------------- */
+.main {
+  width: 100%;
+  padding: 0rem 10rem;
+  padding-top: 12rem;
+  // gap: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .main-info
+.main-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 50%;
+  max-width: 60ch;
+
+  h2 {
+    font-size: 2rem;
+    color: #bec4da;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  h1 {
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 11rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  p {
+    color: #bec4da;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+.mian-logo {
+  width: 280px;
+  height: 280px;
+  border-radius: 100rem;
+  text-align: center;
+  margin: auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  color: #656469;
+  cursor: pointer;
+  animation: flash 2s forwards infinite;
+}
+
+@keyframes flash {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+}
+/* ------------------------------------ x ----------------------------------- */
+@media screen and (max-width: 1023.98px) {
+  .container {
+    background-image: url(../starter-code/assets/home/background-home-tablet.jpg);
+  }
+
+  // .main
+  .main {
+    width: 100%;
+    padding: 0rem 4rem;
+    padding-top: 9rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mian-logo {
+    width: 230px;
+    height: 230px;
+  }
+}
+/* ------------------------------------ x ----------------------------------- */
+@media screen and (max-width: 767.98px) {
+  .container {
+    background-image: url(../starter-code/assets/home/background-home-mobile.jpg);
+  }
+
+  // .main
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0rem 1rem;
+    padding-top: 0rem;
+  }
+
+  .main-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+    p {
+      padding-top: 0rem;
+    }
+  }
+
+  .mian-logo {
+    margin: 6rem 0;
+    width: 100%;
+    max-width: 230px;
+    max-height: 230px;
+  }
+}
+
+@media screen and (max-width: 424.98px) {
+  .main-info {
+    h1 {
+      font-size: 8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 319.98px) {
+  .main-info {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+}

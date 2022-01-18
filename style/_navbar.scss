@@ -1,0 +1,184 @@
+/* ========================================================================== */
+/*                                  MAX-WIDTH                                 */
+/* ========================================================================== */
+
+.head {
+  width: 100%;
+  padding: 2rem 3rem;
+  padding-right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before {
+    content: "";
+    height: 2px;
+    background: rgba(255, 255, 255, 0.256);
+    position: relative;
+    width: 100%;
+    order: 2;
+    margin: -2rem;
+    margin-left: 1rem;
+    z-index: 5;
+  }
+}
+
+// .head-icon
+.head-icon {
+  display: none;
+}
+
+// .head-logo
+.head-logo {
+  min-width: 80px;
+  min-height: 50px;
+  order: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .head-menu
+.head-menu {
+  order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+
+  padding: 2rem 8rem;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(5px);
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-flex;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: calc(0% - 2rem);
+      left: 0;
+      width: 0%;
+      height: 5px;
+      background: white;
+      transition: 0.5s;
+      transition-delay: 0.2s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    span:nth-of-type(1) {
+      color: #e0e5e9;
+      font-weight: 700;
+      padding-right: 0.5rem;
+    }
+
+    span:nth-of-type(2) {
+      color: #e0e5e9;
+      font-weight: 200;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+/* ========================================================================== */
+/*                                    1109                                    */
+/* ========================================================================== */
+@media screen and (max-width: 1109.98px) {
+  .head-menu {
+    a {
+      span:nth-of-type(1) {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ========================================================================== */
+/*                                     899                                    */
+/* ========================================================================== */
+@media screen and (max-width: 899.98px) {
+  .head-menu {
+    padding: 2rem 5rem;
+  }
+}
+
+/* ========================================================================== */
+/*                                     767                                    */
+/* ========================================================================== */
+@media screen and (max-width: 767.98px) {
+  .head {
+    padding: 2rem;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  /* ------------------------------- .head-menu ------------------------------- */
+  .head-menu {
+    position: absolute;
+    top: 0%;
+    right: -50%;
+    transition: all 0.5s ease;
+
+    padding: 2rem;
+    padding-top: 5rem;
+    min-height: 100vh;
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0;
+
+    &.active {
+      right: 0%;
+    }
+
+    a {
+      width: 100%;
+      padding: 1rem 0;
+
+      &::before {
+        bottom: calc(0% - 0rem);
+      }
+    }
+  }
+
+  /* ------------------------------- .head-icon ------------------------------- */
+  .head-icon {
+    z-index: 5;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    &.active > .icon-close {
+      display: block;
+    }
+
+    &.active > .icon-hamber {
+      display: none;
+    }
+
+    .icon-close {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 319.98px) {
+  .head-menu {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+}
