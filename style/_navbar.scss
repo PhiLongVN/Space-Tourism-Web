@@ -50,7 +50,7 @@
 
   padding: 2rem 8rem;
   background: rgba(255, 255, 255, 0.13);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 
   a {
     text-decoration: none;
@@ -66,7 +66,7 @@
       width: 0%;
       height: 5px;
       background: white;
-      transition: 0.5s;
+      transition: 0.2s;
       transition-delay: 0.2s;
     }
 
@@ -85,6 +85,10 @@
       font-weight: 200;
       letter-spacing: 1.5px;
     }
+  }
+
+  .active::before {
+    width: 100%;
   }
 }
 
@@ -148,6 +152,7 @@
     a {
       width: 100%;
       padding: 1rem 0;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.635);
 
       &::before {
         bottom: calc(0% - 0rem);

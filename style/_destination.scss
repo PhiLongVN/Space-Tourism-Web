@@ -1,0 +1,18 @@
+.c-des {
+  background-image: url(../starter-code/assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .c-des {
+    background-image: url(../starter-code/assets/destination/background-destination-tablet.jpg);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .c-des {
+    background-image: url(../starter-code/assets/destination/background-destination-mobile.jpg);
+  }
+}

@@ -54,7 +54,11 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   min-height: 100vh;
+  // max-width: 1440px;
+  margin: auto;
 }
 
 @import "_home.scss";
 @import "_navbar.scss";
+@import "_tech.scss";
+@import "_destination.scss";
