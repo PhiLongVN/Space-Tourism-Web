@@ -50,7 +50,7 @@ function handleClick(timer) {
       let imgDesktop = data["technology"][timer]["images"]["portrait"];
       let imgMobile = data["technology"][timer]["images"]["landscape"];
 
-      cardText = `          
+      cardText = `
             <h3>the technology</h3>
             <h1>${name} </h1>
             <p>
@@ -58,7 +58,7 @@ function handleClick(timer) {
             </p>
         `;
 
-      cardImg = ` 
+      cardImg = `
             <img
               class="img-desktop"
               src="${imgDesktop}"
@@ -76,87 +76,133 @@ function handleClick(timer) {
     });
 }
 
-
-
 // /* ============================================ */
 // /*                  DESTINATION                 */
 // /* ============================================ */
-// let b = 0;
-// const containerText = document.querySelector(".tech-info-text");
-// const containerImg = document.querySelector(".tech-info-img");
-// const number = document.querySelectorAll(".number");
+let b = 0;
 
-// number.forEach((key) => {
-//   key.onclick = () => {
-//     number.forEach((key) => {
-//       key.classList.remove("active");
-//     });
+const planets = document.querySelectorAll(".detail-number span");
 
-//     key.classList.add("active");
-//     a = parseInt(key.dataset.index);
+const TitlePlanet = document.querySelector(".detail-title");
+const paraPlanet = document.querySelector(".detail-para");
+const timePlanet = document.querySelector(".detail-travel");
+const imgPlanet = document.querySelector(".info-img");
 
-//     handleClick(a);
-//   };
-// });
+planets.forEach((key) => {
+  key.onclick = () => {
+    planets.forEach((key) => {
+      key.classList.remove("active");
+    });
 
-// handleClick(a);
-// /* ---------------------------------- update --------------------------------- */
-// function handleClick(timer) {
-//   let cardText = {};
-//   let cardImg = {};
+    key.classList.add("active");
+    b = parseInt(key.dataset.index);
 
-//   fetch("./data.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       let name = data["destinations"][timer]["name"];
-//       let info = data["destinations"][timer]["description"];
-//       let imgDesktop = data["destinations"][timer]["images"]["png"];
-//       let distance = data["destinations"][timer]["distance"]
-//       let travle = data["destinations"][timer]["travel"];
+    handleClickPlanet(b);
+  };
+});
 
-//       cardText = `          
-//             <h3>the technology</h3>
-//             <h1>${name} </h1>
-//             <p>
-//              ${info}
-//             </p>
-//         `;
+handleClickPlanet(b);
+/* ---------------------------------- update --------------------------------- */
+function handleClickPlanet(timer) {
+  let cardPara = {};
+  let cardTitle = {};
+  let cardImg = {};
+  let cardTravel = {};
 
-//       cardImg = ` 
-//             <img
-//               class="img-desktop"
-//               src="${imgDesktop}"
-//               alt=""
-//             />
+  fetch("./data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let name = data["destinations"][timer]["name"];
+      let info = data["destinations"][timer]["description"];
+      let img = data["destinations"][timer]["images"]["png"];
+      let distance = data["destinations"][timer]["distance"];
+      let time = data["destinations"][timer]["travel"];
 
-//             <img
-//               class="img-mobile"
-//               src="${imgMobile}"
-//               alt=""
-//             />
-//          `;
-//       containerText.innerHTML = cardText;
-//       containerImg.innerHTML = cardImg;
-//     });
-// }
+      cardPara = `          
+            <p>
+             ${info}
+              </p>
+        `;
 
+      cardTitle = ` <h1> ${name} </h1>`;
 
+      cardImg = ` 
+            <img
+            
+              src="${img}"
+              alt=""
+            />       
+         `;
 
+      cardTravel = `   <div class="travel-distane">
+                <span>avg.distance</span>
+                <h4> ${distance} </h4>
+              </div>
 
+              <div class="travel-time">
+                <span>est.travle time</span>
+                <h4> ${time} </h4>`;
 
-/* -------------------------------- check ------------------------------- */
-//HÀM NÀY ĐỂ CHECK INPUT VÀO LÀ GÌ
-function checkTime() {
-  if (daily.checked) {
-    const day = dailytext.innerText.toLowerCase();
-    handleClick(day);
-  }
-  if (weekly.checked) {
-    const week = weeklytext.innerText.toLowerCase();
-    handleClick(week);
-  }
-  if (monthly.checked) {
-    const month = monthlytext.innerText.toLowerCase();
-    handleClick(month);
-  }
+      paraPlanet.innerHTML = cardPara;
+      TitlePlanet.innerHTML = cardTitle;
+      timePlanet.innerHTML = cardTravel;
+      imgPlanet.innerHTML = cardImg;
+    });
+}
+
+// /* ============================================ */
+// /*             CREW          */
+// /* ============================================ */
+let c = 0;
+
+const dots = document.querySelectorAll(".text-dot span");
+
+const infoCrew = document.querySelector(".text-para");
+const imgCrew = document.querySelector(".crew-info-img");
+
+dots.forEach((key) => {
+  key.onclick = () => {
+    dots.forEach((key) => {
+      key.classList.remove("active");
+    });
+
+    key.classList.add("active");
+    c = parseInt(key.dataset.index);
+
+    handleClickCrew(c);
+  };
+});
+
+handleClickCrew(c);
+/* ---------------------------------- update --------------------------------- */
+function handleClickCrew(timer) {
+  let cardTitle = {};
+  let cardImg = {};
+
+  fetch("./data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let name = data["crew"][timer]["name"];
+      let bio = data["crew"][timer]["bio"];
+      let img = data["crew"][timer]["images"]["png"];
+      let role = data["crew"][timer]["role"];
+
+      cardTitle = `          
+            <h3> ${role} </h3>
+              <h2> ${name} </h2>
+              <p>
+              ${bio}
+              </p>
+        `;
+
+      cardImg = ` 
+            <img
+             
+              src="${img}"
+              alt=""
+            />       
+         `;
+      infoCrew.innerHTML = cardTitle;
+      imgCrew.innerHTML = cardImg;
+    });
 }

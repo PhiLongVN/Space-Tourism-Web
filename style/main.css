@@ -341,8 +341,8 @@ body {
 }
 
 .head-logo {
-  min-width: 80px;
-  min-height: 50px;
+  min-width: 48px;
+  min-height: 48px;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -443,7 +443,7 @@ body {
 /* ========================================================================== */
 @media screen and (max-width: 767.98px) {
   .head {
-    padding: 2rem;
+    padding: 2rem 2rem;
   }
   .head::before {
     display: none;
@@ -821,15 +821,555 @@ body {
   background-position: center;
 }
 
+/* ============================================ */
+/*               .MAIN-DESTINATION              */
+/* ============================================ */
+.main-destination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+  padding-bottom: 2rem;
+  padding-left: calc(3rem + 48px);
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* ---------------- .DES-TITLE ---------------- */
+.des-title {
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
+}
+
+.des-title h2 {
+  color: #9297a2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.des-title h2 span {
+  padding-right: 1rem;
+  color: #414552;
+}
+
+/* ----------------- .DES-INFO ---------------- */
+.des-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.des-info .info-img {
+  width: 50%;
+}
+
+.des-info .info-img img {
+  width: 100%;
+}
+
+.info-detail {
+  width: 50%;
+  padding-right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.info-detail .detail-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.info-detail .detail-number span {
+  color: rgba(255, 255, 255, 0.551);
+  letter-spacing: 3px;
+  padding-bottom: 0.75rem;
+  font-weight: 400;
+  text-align: left;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.info-detail .detail-number span.active::before {
+  width: 100%;
+}
+
+.info-detail .detail-number span::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background: white;
+  width: 0%;
+  top: 100%;
+  left: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.info-detail .detail-number span:hover::before {
+  width: 100%;
+}
+
+.info-detail .detail-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.info-detail .detail-para {
+  color: #b0b5d3;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.286);
+}
+
+.info-detail .detail-travel {
+  padding-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-detail .detail-travel .travel-distane span {
+  font-size: 1rem;
+  color: white;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.info-detail .detail-travel .travel-distane h4 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+}
+
+.info-detail .detail-travel .travel-time span {
+  font-size: 1rem;
+  color: white;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.info-detail .detail-travel .travel-time h4 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+}
+
+/* ============================================ */
+/*                      XX                      */
+/* ============================================ */
 @media screen and (max-width: 1023.98px) {
   .c-des {
     background-image: url(../starter-code/assets/destination/background-destination-tablet.jpg);
   }
+  .main-destination {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /* ----------------- .DES-INFO ---------------- */
+  .des-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .des-info .info-img {
+    width: 50%;
+  }
+  .info-detail {
+    width: 100%;
+    padding-right: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info-detail .detail-number {
+    gap: 1rem;
+  }
+  .info-detail .detail-para {
+    text-align: center;
+    width: 100%;
+    max-width: 55ch;
+  }
+  .info-detail .detail-travel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
+/* ============================================ */
+/*                      XX                      */
+/* ============================================ */
 @media screen and (max-width: 767.98px) {
   .c-des {
     background-image: url(../starter-code/assets/destination/background-destination-mobile.jpg);
+  }
+  .des-info .info-img {
+    width: 70%;
+  }
+  .info-detail .detail-travel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* ============================================ */
+/*                      XX                      */
+/* ============================================ */
+@media screen and (max-width: 424.98px) {
+  .main-destination {
+    padding: 1rem;
+  }
+  .des-title {
+    padding-left: 1rem;
+  }
+  .info-detail .detail-number span {
+    font-size: 1.1rem;
+  }
+}
+
+.c-crew {
+  background-image: url(../starter-code/assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* ============================================ */
+/*                  .MAIN-CREW                  */
+/* ============================================ */
+.main-crew {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.8rem;
+  padding-left: calc(3rem + 48px);
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* ---------------- .CREW-TITLE --------------- */
+.crew-title {
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
+}
+
+.crew-title h2 {
+  color: #9297a2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.crew-title h2 span {
+  padding-right: 1rem;
+  color: #414552;
+}
+
+/* ---------------- .CREW-INFO ---------------- */
+.crew-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.crew-info-text {
+  width: 50%;
+}
+
+.crew-info-text .text-para {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  text-align: left;
+}
+
+.crew-info-text .text-para h3 {
+  color: #969da9;
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.crew-info-text .text-para h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: clamp(1.4rem, 5vw, 5rem);
+  color: white;
+  font-weight: 300;
+}
+
+.crew-info-text .text-para p {
+  color: #b6b9cc;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 1px;
+  padding: 1rem 0 8rem 0;
+  max-width: 60ch;
+}
+
+.crew-info-text .text-dot {
+  width: 100%;
+}
+
+.crew-info-text .text-dot span {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 1000px;
+  background: rgba(255, 255, 255, 0.252);
+  cursor: pointer;
+}
+
+.crew-info-text .text-dot span.active {
+  background: white;
+}
+
+.crew-info-text .text-dot span:hover {
+  background: rgba(255, 255, 255, 0.531);
+}
+
+.crew-info-img {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crew-info-img img {
+  width: 100%;
+}
+
+/* ============================================ */
+/*                     1023                     */
+/* ============================================ */
+@media screen and (max-width: 1023.98px) {
+  .c-crew {
+    background-image: url(../starter-code/assets/crew/background-crew-tablet.jpg);
+  }
+  .main-crew {
+    padding: 0 3rem;
+  }
+  .crew-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .crew-info-text {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .crew-info-text .text-para {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .crew-info-text .text-para P {
+    padding-bottom: 2rem;
+  }
+  .crew-info-img {
+    width: 60%;
+  }
+}
+
+/* ============================================ */
+/*                      767                     */
+/* ============================================ */
+@media screen and (max-width: 767.98px) {
+  .c-crew {
+    background-image: url(../starter-code/assets/crew/background-crew-mobile.jpg);
+  }
+  .main-crew {
+    padding-bottom: 3rem;
+  }
+  .crew-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+/* ============================================ */
+/*                      424                     */
+/* ============================================ */
+@media screen and (max-width: 424.98px) {
+  .main-crew {
+    padding: 0 1rem;
+    padding-bottom: 3rem;
+  }
+  .crew-title {
+    padding-left: 2rem;
+  }
+  .crew-info-img {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=main.css.map */

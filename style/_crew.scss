@@ -1,0 +1,199 @@
+.c-crew {
+  background-image: url(../starter-code/assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* ============================================ */
+/*                  .MAIN-CREW                  */
+/* ============================================ */
+.main-crew {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  padding-left: calc(3rem + 48px);
+  width: 100%;
+  max-width: 1440px;
+  //   height: calc(100vh - 164px);
+}
+
+/* ---------------- .CREW-TITLE --------------- */
+.crew-title {
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
+
+  h2 {
+    color: #9297a2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    span {
+      padding-right: 1rem;
+      color: #414552;
+    }
+  }
+}
+
+/* ---------------- .CREW-INFO ---------------- */
+.crew-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+// .crew-info-text
+.crew-info-text {
+  width: 50%;
+  // 1
+  .text-para {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    align-self: stretch;
+    text-align: left;
+
+    h3 {
+      color: #969da9;
+      font-size: clamp(1.2rem, 5vw, 2rem);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: clamp(1.4rem, 5vw, 5rem);
+      color: white;
+      font-weight: 300;
+    }
+
+    p {
+      color: #b6b9cc;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      letter-spacing: 1px;
+      padding: 1rem 0 8rem 0;
+      max-width: 60ch;
+    }
+  }
+
+  //   2
+  .text-dot {
+    width: 100%;
+
+    span {
+      margin-right: 1rem;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 1000px;
+      background: rgba(255, 255, 255, 0.252);
+      cursor: pointer;
+
+      &.active {
+        background: white;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.531);
+      }
+    }
+  }
+}
+
+.crew-info-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+/* ============================================ */
+/*                     1023                     */
+/* ============================================ */
+@media screen and (max-width: 1023.98px) {
+  .c-crew {
+    background-image: url(../starter-code/assets/crew/background-crew-tablet.jpg);
+  }
+
+  .main-crew {
+    padding: 0 3rem;
+  }
+
+  .crew-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .crew-info-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    .text-para {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      P {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .crew-info-img {
+    width: 60%;
+  }
+}
+
+/* ============================================ */
+/*                      767                     */
+/* ============================================ */
+@media screen and (max-width: 767.98px) {
+  .c-crew {
+    background-image: url(../starter-code/assets/crew/background-crew-mobile.jpg);
+  }
+
+  .main-crew {
+    padding-bottom: 3rem;
+  }
+  .crew-info {
+    flex-direction: column-reverse;
+  }
+}
+
+
+/* ============================================ */
+/*                      424                     */
+/* ============================================ */
+@media screen and (max-width: 424.98px) {
+  .main-crew {
+    padding: 0 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .crew-title {
+    padding-left: 2rem;
+  }
+  .crew-info-img {
+    width: 70%;
+  }
+}

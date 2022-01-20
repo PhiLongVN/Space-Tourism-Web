@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-<div class="container">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../style/main.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <div class="container c-crew">
       <!-- ======================================================================= -->
       <!--                                  HEAD                                   -->
       <!-- ======================================================================= -->
@@ -19,7 +24,7 @@
         </div>
 
         <div class="head-menu">
-          <a href="./index.html">
+          <a href="./index.html" class="active">
             <span>00</span>
             <span>Home</span>
           </a>
@@ -50,33 +55,45 @@
       <!-- ======================================================================= -->
       <!--                                  MAIN                                   -->
       <!-- ======================================================================= -->
-      <main class="main">
-        <div class="main-info">
-          <h2>So, you want to travel to</h2>
-          <h1>Space</h1>
-          <p>
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
+      <main class="main-crew">
+        <!-- ----------------- TITLE ----------------- -->
+        <div class="crew-title">
+          <h2><span>02</span>meet your crew</h2>
         </div>
 
-        <div class="mian-logo">Explore</div>
+        <!-- ----------------- INFO ------------------ -->
+        <div class="crew-info">
+          <!-- text -->
+          <div class="crew-info-text">
+            <!-- 1 -->
+            <div class="text-para">
+              <h3>Flight engineer</h3>
+              <h2>anousheh anisari</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptate error porro repellat! Quaerat molestias distinctio
+                facilis vel! Eos, nam perspiciatis facere, libero magni facilis
+                tempore officiis, amet necessitatibus vitae tempora.
+              </p>
+            </div>
+
+            <!-- 2 -->
+            <div class="text-dot">
+              <span data-index="0" class="active"></span>
+              <span data-index="1"></span>
+              <span data-index="2"></span>
+              <span data-index="3"></span>
+            </div>
+          </div>
+
+          <!-- img -->
+          <div class="crew-info-img">
+            <img src="./assets/crew/image-anousheh-ansari.png" alt="" />
+          </div>
+        </div>
       </main>
     </div>
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
 
-  02 Meet your crew
-
-  Commander
-  Douglas Hurley
-
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
-</body>
+    <script src="../script/main.js"></script>
+  </body>
 </html>
