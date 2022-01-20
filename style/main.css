@@ -74,6 +74,14 @@ body {
   margin: auto;
 }
 
+.pl {
+  letter-spacing: 3px;
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem;
+  color: #0ce425;
+}
+
 /* ---------------------------------- cotainer --------------------------------- */
 .container {
   display: -webkit-box;

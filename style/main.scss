@@ -58,6 +58,14 @@ body {
   margin: auto;
 }
 
+.pl {
+  letter-spacing: 3px;
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem;
+  color: rgb(12, 228, 37);
+}
+
 @import "_home.scss";
 @import "_navbar.scss";
 @import "_tech.scss";
